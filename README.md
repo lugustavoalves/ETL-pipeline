@@ -46,7 +46,7 @@ The pipeline:
   `bitcoin`, `cryptocurrency`, `crypto`, `BTC`, `btc`
 - Saves raw data to a local file: `articles.json`
 
-📷 ![articles.json Output](images/2.pmg)
+📷 ![articles.json Output](images/2.png)
 
 ---
 
