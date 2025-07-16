@@ -46,7 +46,7 @@ The pipeline:
   `bitcoin`, `cryptocurrency`, `crypto`, `BTC`, `btc`
 - Saves raw data to a local file: `articles.json`
 
-📷 ![articles.json Output](images/2.png)
+ ![articles.json Output](images/2.png)
 
 ---
 
@@ -59,7 +59,7 @@ The pipeline:
   - Converts the `source` field into a key-value format
 - Streams the cleaned JSON to the Kafka topic `finaltopic`
 
-📷 ![Producer Output](images/3.png)
+ ![Producer Output](images/3.png)
 
 ---
 
@@ -69,7 +69,7 @@ The pipeline:
   - Enforces types like `StringType` and `TimestampType`
   - Handles nullable fields like `author` and `description`
 
-📷 ![Spark Console Output](images/4.png)
+ ![Spark Console Output](images/4.png)
 
 ---
 
@@ -82,7 +82,7 @@ The pipeline:
 SELECT * FROM articles LIMIT 5;
 ```
 
-📷 ![MySQL Data Output](images/5.png)
+ ![MySQL Data Output](images/5.png)
 
 
 ---
