@@ -99,10 +99,11 @@ SELECT * FROM articles LIMIT 5;
 │   ├── 4.png
 │   └── 5.png
 │
-├── source_data.py
+├── json_consumer_hdfs.py
+├── json_consumer.py
 ├── producer.py
-├── spark_code.scala
-├── sql_schema.sql
+├── source_data.py
+├── sparkscala
 └── README.md
 ```
  
