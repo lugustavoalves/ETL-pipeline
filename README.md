@@ -1,6 +1,6 @@
 # ETL Pipeline: Real-time News Article Processing
 
-This project implements an **ETL (Extract, Transform, Load)** pipeline for processing real-time cryptocurrency-related news articles. Built for the **Big Data Integration and Storage (PROG8451)** course, this system demonstrates streaming data processing using **Kafka**, **Spark Structured Streaming**, and **MySQL**.
+This project implements an **ETL (Extract, Transform, Load)** pipeline for processing real-time cryptocurrency-related news articles.This system demonstrates streaming data processing using **Kafka**, **Spark Structured Streaming**, and **MySQL**.
 
 ---
 
@@ -26,12 +26,7 @@ The pipeline:
 
 ## 🧩 Pipeline Architecture
 
-```mermaid
-graph LR
-    A[Python Producer] --> B[Kafka (finaltopic)]
-    B --> C[Spark Structured Streaming]
-    C --> D[MySQL (final.articles)]
-```
+![Pipeline](images/1.png)
 
 | Component              | Role                                                                 |
 |------------------------|----------------------------------------------------------------------|
@@ -51,7 +46,7 @@ graph LR
   `bitcoin`, `cryptocurrency`, `crypto`, `BTC`, `btc`
 - Saves raw data to a local file: `articles.json`
 
-📷 ![articles.json Output](images/articles_json.png)
+📷 ![articles.json Output](images/2.pmg)
 
 ---
 
@@ -64,7 +59,7 @@ graph LR
   - Converts the `source` field into a key-value format
 - Streams the cleaned JSON to the Kafka topic `finaltopic`
 
-📷 ![Producer Output](images/producer_output.png)
+📷 ![Producer Output](images/3.png)
 
 ---
 
@@ -74,7 +69,7 @@ graph LR
   - Enforces types like `StringType` and `TimestampType`
   - Handles nullable fields like `author` and `description`
 
-📷 ![Spark Console Output](images/spark_console.png)
+📷 ![Spark Console Output](images/4.png)
 
 ---
 
@@ -87,18 +82,8 @@ graph LR
 SELECT * FROM articles LIMIT 5;
 ```
 
-📷 ![MySQL Data Output](images/mysql_output.png)
+📷 ![MySQL Data Output](images/5.png)
 
----
-
-## 📅 Project Info
-
-- **Course**: PROG8451 - Big Data Integration and Storage  
-- **Semester**: Winter 2025  
-- **Section**: 2  
-- **Instructor**: Prof. Shanti Couvrette  
-- **Author**: Lucas Gustavo Alves  
-- **Date**: April 20, 2025  
 
 ---
 
@@ -108,10 +93,11 @@ SELECT * FROM articles LIMIT 5;
 /project-folder
 │
 ├── images/
-│   ├── articles_json.png
-│   ├── producer_output.png
-│   ├── spark_console.png
-│   └── mysql_output.png
+│   ├── 1.png
+│   ├── 2.png
+│   ├── 3.png
+│   ├── 4.png
+│   └── 5.png
 │
 ├── source_data.py
 ├── producer.py
@@ -119,11 +105,5 @@ SELECT * FROM articles LIMIT 5;
 ├── sql_schema.sql
 └── README.md
 ```
-
----
-
-## 📬 Contact
-
-For any questions or feedback, feel free to reach out via GitHub Issues or contact the project author.
-
+ 
 ---
