@@ -108,3 +108,9 @@ SELECT * FROM articles LIMIT 5;
 ```
  
 ---
+
+## Author
+
+Lucas Gustavo Alves
+
+
